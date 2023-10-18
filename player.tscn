@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://byq3hnd7q2r7a"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_m0qxu"]
+[ext_resource type="Texture2D" uid="uid://dadm38w5sihi5" path="res://super-bazza-bogan/bazzabogan.png" id="1_qrvvk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lnqk"]
+atlas = ExtResource("1_qrvvk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qxe1w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lnqk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sntsh"]
+height = 38.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_m0qxu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qxe1w")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_sntsh")
