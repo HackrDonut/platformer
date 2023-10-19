@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://cql57l6mha6s8"]
+
+[ext_resource type="Texture2D" uid="uid://clvsw7qmscp5f" path="res://super-bazza-bogan/toad.png" id="1_bjf55"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqhcm"]
+atlas = ExtResource("1_bjf55")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ne50"]
+atlas = ExtResource("1_bjf55")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kkn1"]
+atlas = ExtResource("1_bjf55")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf4fu"]
+atlas = ExtResource("1_bjf55")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp5a4"]
+atlas = ExtResource("1_bjf55")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbf0d"]
+atlas = ExtResource("1_bjf55")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxaba"]
+atlas = ExtResource("1_bjf55")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkmwg"]
+atlas = ExtResource("1_bjf55")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ijk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqhcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ne50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kkn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sf4fu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lp5a4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbf0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxaba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkmwg")
+}],
+"loop": true,
+"name": &"hop",
+"speed": 5.0
+}]
+
+[node name="Toad" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8ijk7")
+animation = &"hop"
+frame_progress = 0.367461
