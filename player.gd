@@ -37,7 +37,7 @@ func _physics_process(delta):
 func update_animation(direction):
 	if is_jumping:
 		animated_sprite_2d.play("jump")
-	elif direction != 0:
+	if direction != 0:
 		animated_sprite_2d.flip_h = (direction < 0)
 		animated_sprite_2d.play("run")
 	else:
