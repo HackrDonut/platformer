@@ -1,7 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://byq3hnd7q2r7a"]
+[gd_scene load_steps=13 format=3 uid="uid://byq3hnd7q2r7a"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_m0qxu"]
 [ext_resource type="Texture2D" uid="uid://dadm38w5sihi5" path="res://super-bazza-bogan/bazzabogan.png" id="1_qrvvk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqyeo"]
+atlas = ExtResource("1_qrvvk")
+region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7lnqk"]
 atlas = ExtResource("1_qrvvk")
@@ -25,6 +29,14 @@ region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qxe1w"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqyeo")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7lnqk")
@@ -57,14 +69,41 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sntsh"]
-height = 38.0
+radius = 9.0
+height = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eosta"]
+size = Vector2(27, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwasl"]
+size = Vector2(28, 5)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_m0qxu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qxe1w")
-animation = &"jump"
+animation = &"die"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
 shape = SubResource("CapsuleShape2D_sntsh")
+
+[node name="Hitbox2D" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox2D"]
+position = Vector2(2.5, -1.5)
+shape = SubResource("RectangleShape2D_eosta")
+
+[node name="Feet2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Feet2D"]
+position = Vector2(2, 13.5)
+shape = SubResource("RectangleShape2D_bwasl")
+
+[node name="death_timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Hitbox2D" to="." method="_on_hitbox_2d_body_entered"]
