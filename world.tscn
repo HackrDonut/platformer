@@ -43,3 +43,6 @@ position_smoothing_speed = 20.0
 
 [node name="Toad" parent="TileMap2D" instance=ExtResource("4_gn8wb")]
 position = Vector2(168, 528)
+
+[node name="Toad2" parent="TileMap2D" instance=ExtResource("4_gn8wb")]
+position = Vector2(632, 464)
