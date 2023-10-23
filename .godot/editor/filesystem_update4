@@ -1,4 +1,4 @@
-res://player.tscn
 res://world.tscn
-res://player.gd
+res://player.tscn
 res://toad.tscn
+res://toad.gd

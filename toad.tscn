@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cql57l6mha6s8"]
+[gd_scene load_steps=13 format=3 uid="uid://cql57l6mha6s8"]
 
 [ext_resource type="Texture2D" uid="uid://clvsw7qmscp5f" path="res://super-bazza-bogan/toad.png" id="1_bjf55"]
+[ext_resource type="Script" path="res://toad.gd" id="1_xmtvh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqhcm"]
 atlas = ExtResource("1_bjf55")
@@ -63,12 +64,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"hop",
-"speed": 5.0
+"speed": 11.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ihah"]
+
 [node name="Toad" type="CharacterBody2D"]
+script = ExtResource("1_xmtvh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -8)
 sprite_frames = SubResource("SpriteFrames_8ijk7")
 animation = &"hop"
-frame_progress = 0.367461
+autoplay = "hop"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_6ihah")
