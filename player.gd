@@ -18,6 +18,9 @@ func _ready():
 	death_timer.connect("timeout", Callable(self, "_on_DeathTimer_timeout"))
 
 func _physics_process(delta):
+	if is_dying:
+		return
+		
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -41,6 +44,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 func update_animation(direction):
+	if is_dying:
+		return
+		
 	if is_jumping:
 		animated_sprite_2d.play("jump")
 	if direction != 0:
@@ -52,5 +58,29 @@ func update_animation(direction):
 
 func _on_hitbox_2d_body_entered(body):
 	if body.is_in_group("Enemy") and body.is_alive:
-		get_tree().reload_current_scene()
+		die()
 
+func die():
+	if is_dying:
+		return
+		
+	is_dying = true
+	animated_sprite_2d.play("die")
+	await move_player_up_and_down()
+	get_tree().reload_current_scene()
+
+func move_player_up_and_down():
+	var start_position = position
+	var up_position = start_position + Vector2(0, -100)
+	var down_position = start_position + Vector2(0, 600)
+	
+	while position.y > up_position.y:
+		position.y -= 4
+		await get_tree().create_timer(0.01).timeout
+	
+	while position.y < down_position.y:
+		position.y += 4
+		await get_tree().create_timer(0.01).timeout
+		
+func onDeathTimer_timeout():
+	get_tree().reload_current_scene()
