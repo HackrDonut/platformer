@@ -5,3 +5,6 @@ res://toad.gd
 res://player.gd
 res://big_toad.gd
 res://big_toad.tscn
+res://Coin.gd
+res://coin.tscn
+res://world.gd
