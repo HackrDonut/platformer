@@ -96,4 +96,9 @@ position = Vector2(-9, -2)
 scale = Vector2(0.654112, 0.960835)
 target_position = Vector2(0, 15)
 
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2(-9, -2)
+scale = Vector2(0.654112, 0.960835)
+target_position = Vector2(0, 15)
+
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
