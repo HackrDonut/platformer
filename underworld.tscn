@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://bnbqeaeo7f1oe"]
+
+[ext_resource type="Texture2D" uid="uid://dfm3d2yb553ku" path="res://super-bazza-bogan/flagpole.png" id="1_6ido6"]
+[ext_resource type="Script" path="res://underworld.gd" id="1_smtqq"]
+[ext_resource type="Texture2D" uid="uid://dxbxbm4b6x737" path="res://super-bazza-bogan/lvl2-brick.png" id="2_t8onr"]
+[ext_resource type="Texture2D" uid="uid://ci43lmcbfl0mu" path="res://super-bazza-bogan/lvl2-block.png" id="3_j0wmw"]
+[ext_resource type="PackedScene" uid="uid://byq3hnd7q2r7a" path="res://player.tscn" id="4_rtusl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jdja2"]
+texture = ExtResource("1_6ido6")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_njvvb"]
+texture = ExtResource("2_t8onr")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ikye"]
+texture = ExtResource("3_j0wmw")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
+
+[sub_resource type="TileSet" id="TileSet_xu5os"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_jdja2")
+sources/1 = SubResource("TileSetAtlasSource_njvvb")
+sources/2 = SubResource("TileSetAtlasSource_6ikye")
+
+[node name="underworld" type="Node2D"]
+script = ExtResource("1_smtqq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 1890.0
+offset_bottom = 744.0
+color = Color(0.133333, 0.12549, 0.27451, 1)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_xu5os")
+format = 2
+layer_0/tile_data = PackedInt32Array(2555904, 2, 0, 2555905, 2, 0, 2555906, 2, 0, 2555907, 2, 0, 2555908, 2, 0, 2555909, 2, 0, 2555910, 2, 0, 2555911, 2, 0, 2555912, 2, 0, 2555913, 2, 0, 2555914, 2, 0, 2555915, 2, 0, 2555916, 2, 0, 2555920, 2, 0, 2555921, 2, 0, 2555922, 2, 0, 2555923, 2, 0, 2555924, 2, 0, 2555925, 2, 0, 2555926, 2, 0, 2555927, 2, 0, 2555928, 2, 0, 2555929, 2, 0, 2555930, 2, 0, 2555931, 2, 0, 2555932, 2, 0, 2555933, 2, 0, 2555934, 2, 0, 2555935, 2, 0, 2555936, 2, 0, 2555937, 2, 0, 2555938, 2, 0, 2555939, 2, 0, 2555940, 2, 0, 2555941, 2, 0, 2555942, 2, 0, 2555943, 2, 0, 2555944, 2, 0, 2555945, 2, 0, 2555946, 2, 0, 2555947, 2, 0, 2555948, 2, 0, 2555949, 2, 0, 2555950, 2, 0, 2555951, 2, 0, 2555952, 2, 0, 2555953, 2, 0, 2555954, 2, 0, 2555955, 2, 0, 2555956, 2, 0, 2555957, 2, 0, 2555958, 2, 0, 2555959, 2, 0, 2555960, 2, 0, 2555961, 2, 0, 2555962, 2, 0, 2555963, 2, 0, 2555964, 2, 0, 2555965, 2, 0, 2555966, 2, 0, 2555967, 2, 0, 2555968, 2, 0, 2555969, 2, 0, 2555970, 2, 0, 2555971, 2, 0, 2555972, 2, 0, 2555973, 2, 0, 2555974, 2, 0, 2555975, 2, 0, 2555976, 2, 0, 2490368, 1, 0, 2424832, 1, 0, 2359296, 1, 0, 2293760, 1, 0, 2228224, 1, 0, 2162688, 1, 0, 2097152, 1, 0, 2031616, 1, 0, 1966080, 1, 0, 1900544, 1, 0, 1835008, 1, 0, 1769472, 1, 0, 2490376, 1, 0, 2424841, 1, 0, 2359306, 1, 0, 2293771, 1, 0, 2228236, 1, 0, 2293772, 1, 0, 2359308, 1, 0, 2424844, 1, 0, 2490380, 1, 0, 2490379, 1, 0, 2490378, 1, 0, 2490377, 1, 0, 2424842, 1, 0, 2424843, 1, 0, 2359307, 1, 0, 2490385, 1, 0, 2424849, 1, 0, 2359313, 1, 0, 2359312, 1, 0, 2359314, 1, 0, 2359315, 1, 0, 2359316, 1, 0, 2359317, 1, 0, 2424852, 1, 0, 2490388, 1, 0, 2621440, 2, 0, 2621441, 2, 0, 2621442, 2, 0, 2621443, 2, 0, 2621444, 2, 0, 2621445, 2, 0, 2621446, 2, 0, 2621447, 2, 0, 2621448, 2, 0, 2621449, 2, 0, 2621450, 2, 0, 2621451, 2, 0, 2621452, 2, 0, 2621456, 2, 0, 2621457, 2, 0, 2621458, 2, 0, 2621459, 2, 0, 2621460, 2, 0, 2621461, 2, 0, 2621462, 2, 0, 2621463, 2, 0, 2621464, 2, 0, 2621465, 2, 0, 2621466, 2, 0, 2621467, 2, 0, 2621468, 2, 0, 2621469, 2, 0, 2621470, 2, 0, 2621471, 2, 0, 2621472, 2, 0, 2621473, 2, 0, 2621474, 2, 0, 2621475, 2, 0, 2621476, 2, 0, 2621477, 2, 0, 2621478, 2, 0, 2621479, 2, 0, 2621480, 2, 0, 2621481, 2, 0, 2621482, 2, 0, 2621483, 2, 0, 2621484, 2, 0, 2621485, 2, 0, 2621486, 2, 0, 2621487, 2, 0, 2621488, 2, 0, 2621489, 2, 0, 2621490, 2, 0, 2621491, 2, 0, 2621492, 2, 0, 2621493, 2, 0, 2621494, 2, 0, 2621495, 2, 0, 2621496, 2, 0, 2621497, 2, 0, 2621498, 2, 0, 2621499, 2, 0, 2621500, 2, 0, 2621501, 2, 0, 2621502, 2, 0, 2621503, 2, 0, 2621504, 2, 0, 2621505, 2, 0, 2621506, 2, 0, 2621507, 2, 0, 2621508, 2, 0, 2621509, 2, 0, 2621510, 2, 0, 2621511, 2, 0, 2621512, 2, 0)
+
+[node name="Player" parent="TileMap" instance=ExtResource("4_rtusl")]
+position = Vector2(51, 607)
+
+[node name="Camera2D" type="Camera2D" parent="TileMap/Player"]
+zoom = Vector2(1.35, 1.35)
+limit_left = 0
+limit_top = 0
+limit_right = 1550
+limit_bottom = 650
