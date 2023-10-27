@@ -10,3 +10,8 @@ func _ready():
 func _process(delta):
 	pass
 
+
+
+func _on_death_pit_body_entered(body):
+	if body.is_in_group("Player"):
+		body.die()
