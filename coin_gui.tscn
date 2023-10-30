@@ -6,5 +6,15 @@
 script = ExtResource("1_fxlpl")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 44.0
+offset_bottom = 29.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 39.0
+offset_right = 44.0
+offset_bottom = 62.0
+metadata/_edit_use_anchors_ = true

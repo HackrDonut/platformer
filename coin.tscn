@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://0a5nwiqkgpcn"]
+[gd_scene load_steps=5 format=3 uid="uid://vdohpn4wlxxt"]
 
-[ext_resource type="Texture2D" uid="uid://de6xdl8i6jndx" path="res://coin.png" id="1_urn5p"]
+[ext_resource type="Texture2D" uid="uid://de6xdl8i6jndx" path="res://super-bazza-bogan/coin.png" id="1_8uj1m"]
 [ext_resource type="Script" path="res://Coin.gd" id="2_bps03"]
 [ext_resource type="AudioStream" uid="uid://rsffrq73rc30" path="res://super-bazza-bogan/coin.mp3" id="3_l1m4r"]
 
@@ -9,7 +9,7 @@
 [node name="Coin" type="Sprite2D"]
 position = Vector2(-1.5, 1.5)
 scale = Vector2(0.65625, 0.65625)
-texture = ExtResource("1_urn5p")
+texture = ExtResource("1_8uj1m")
 script = ExtResource("2_bps03")
 
 [node name="interaction" type="Area2D" parent="."]

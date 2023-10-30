@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://world.gd" id="1_1llpy"]
 [ext_resource type="Texture2D" uid="uid://5mgvxklc8lhi" path="res://super-bazza-bogan/brick.png" id="1_8neva"]
 [ext_resource type="Texture2D" uid="uid://dxd4v8tqod5va" path="res://super-bazza-bogan/block.png" id="1_omltg"]
-[ext_resource type="PackedScene" uid="uid://0a5nwiqkgpcn" path="res://coin.tscn" id="3_droyi"]
+[ext_resource type="PackedScene" uid="uid://vdohpn4wlxxt" path="res://coin.tscn" id="3_droyi"]
 [ext_resource type="PackedScene" uid="uid://byq3hnd7q2r7a" path="res://player.tscn" id="3_q5nar"]
 [ext_resource type="PackedScene" uid="uid://cql57l6mha6s8" path="res://toad.tscn" id="4_gn8wb"]
 [ext_resource type="Texture2D" uid="uid://dfm3d2yb553ku" path="res://super-bazza-bogan/flagpole.png" id="4_ochtm"]
