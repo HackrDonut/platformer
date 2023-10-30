@@ -8,3 +8,7 @@ res://coin_gui.tscn
 res://global.gd
 res://player.gd
 res://coin_gui.gd
+res://start.gd
+res://start.tscn
+res://gameover.gd
+res://gameover.tscn

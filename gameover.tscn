@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdxv5xn12opj4"]
+
+[ext_resource type="Script" path="res://gameover.gd" id="1_0u67m"]
+
+[node name="gameover" type="CanvasLayer"]
+script = ExtResource("1_0u67m")
+
+[node name="Play_again" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -30.0
+offset_right = 97.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play Again"
+
+[node name="quit" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = 23.0
+offset_right = 97.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[connection signal="pressed" from="Play_again" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
