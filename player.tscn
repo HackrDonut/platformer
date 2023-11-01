@@ -106,4 +106,6 @@ shape = SubResource("RectangleShape2D_bwasl")
 
 [node name="death_timer" type="Timer" parent="."]
 
+[node name="FlipFlopFireTimer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Hitbox2D" to="." method="_on_hitbox_2d_body_entered"]

@@ -11,3 +11,9 @@ res://questionblock.tscn
 res://beer.tscn
 res://player.gd
 res://beer.gd
+res://flipflop.tscn
+res://flipflop_power_up.tscn
+res://flipflop_power_up.gd
+res://flipflop.gd
+res://questionblock.gd
+res://global.gd

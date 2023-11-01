@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://no8i7k4x4q7b"]
+
+[ext_resource type="Texture2D" uid="uid://dhso58cnpbcg1" path="res://thong.png" id="1_034xq"]
+[ext_resource type="Script" path="res://flipflop_power_up.gd" id="1_bv6x8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hr34u"]
+radius = 16.0
+
+[node name="flipflop_power_up" type="Area2D"]
+script = ExtResource("1_bv6x8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hr34u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_034xq")
+hframes = 5
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

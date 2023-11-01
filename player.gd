@@ -1,11 +1,14 @@
 extends CharacterBody2D
 
+var is_firing_flipflop = false
+var can_fire_flipflop = false
 var is_dying = false
 var is_jumping = false
 var is_big = false
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+var player_direction = 1
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -13,10 +16,12 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var death_timer = $death_timer
+@onready var flipflop_fire_timer = $FlipFlopFireTimer
 
 func _ready():
 	add_to_group("Player")
 	death_timer.connect("timeout", Callable(self, "_on_DeathTimer_timeout"))
+	flipflop_fire_timer.connect("timeout", Callable(self, "_on_FlipFlopFireTimer_timeout"))
 
 func _physics_process(delta):
 	if is_dying:
@@ -28,6 +33,8 @@ func _physics_process(delta):
 	else:
 		is_jumping = false
 
+	if Global.current_state == Global.PlayerState.FLIPFLOP and Input.is_action_just_pressed("fire"):
+		fire_flipflop()
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -45,16 +52,26 @@ func _physics_process(delta):
 	move_and_slide()
 
 func update_animation(direction):
-	if is_dying:
+	if is_dying or is_firing_flipflop:
 		return
 		
-	if is_jumping:
-		animated_sprite_2d.play("jump")
-	if direction != 0:
-		animated_sprite_2d.flip_h = (direction < 0)
-		animated_sprite_2d.play("run")
-	else:
-		animated_sprite_2d.play("idle")
+	match Global.current_state:
+		Global.PlayerState.SMALL, Global.PlayerState.BIG:
+			if is_jumping:
+				animated_sprite_2d.play("jump")
+			elif direction != 0:
+				animated_sprite_2d.flip_h = (direction < 0)
+				animated_sprite_2d.play("run")
+			else:
+				animated_sprite_2d.play("idle")
+		Global.PlayerState.FLIPFLOP:
+			if is_jumping:
+				animated_sprite_2d.play("flipflop_jump")
+			elif direction != 0:
+				animated_sprite_2d.flip_h = (direction < 0)
+				animated_sprite_2d.play("flipflop_run")
+			else:
+				animated_sprite_2d.play("flipflop_idle")
 
 
 func _on_hitbox_2d_body_entered(body):

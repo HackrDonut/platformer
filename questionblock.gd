@@ -16,7 +16,15 @@ func _on_body_entered(body):
 func bump_block():
 	state = State.BUMPED
 	$Sprite2D.frame = 1 # Switch to the second frame to indicate "used" state
-	Global.spawn_beer_bottle(self.global_position + Vector2(0, -20))
+	
+	
+	match Global.current_state:
+		Global.PlayerState.SMALL:
+			Global.spawn_beer_bottle(self.global_position + Vector2(0, -20))
+		Global.PlayerState.BIG, Global.PlayerState.FLIPFLOP:
+			Global.spawn_flipflop_power_up(self.global_position + Vector2(0, -30))
+	
+	
 	bump_upwards()
 	var timer = get_tree().create_timer(0,2)
 	await timer.timeout
