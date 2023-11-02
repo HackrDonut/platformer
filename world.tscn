@@ -145,6 +145,9 @@ limit_top = 0
 limit_bottom = 650
 position_smoothing_speed = 20.0
 
+[node name="questionblock" parent="TileMap2D" instance=ExtResource("10_ar0o2")]
+position = Vector2(1032.92, 423.173)
+
 [node name="interact" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interact"]

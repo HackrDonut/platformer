@@ -76,10 +76,13 @@ func update_animation(direction):
 
 func _on_hitbox_2d_body_entered(body):
 	if body.is_in_group("Enemy") and body.is_alive:
-		if is_big:
-			become_small()
-		else:
-			die()
+		match Global.current_state:
+			Global.PlayerState.SMALL:
+				die()
+			Global.PlayerState.BIG:
+				Global.current_state = Global.PlayerState.SMALL
+			Global.PlayerState.FLIPFLOP:
+				Global.current_state = Global.PlayerState.BIG
 
 func die():
 	if is_dying:
@@ -113,9 +116,28 @@ func onDeathTimer_timeout():
 	get_tree().reload_current_scene()
 
 func become_big():
-	is_big = true
+	Global.current_state = Global.PlayerState.BIG
 	self.scale = Vector2(1.5, 1.5)
 
 func become_small():
-	is_big = false
+	Global.current_state = Global.PlayerState.SMALL
 	self.scale = Vector2(1, 1)
+
+func got_flipflop():
+	Global.current_state = Global.PlayerState.FLIPFLOP
+
+# Inside fire shoe function
+func fire_flipflop():
+	is_firing_flipflop = true
+	print("firing flipflop")
+	var flipflop = load("res://flipflop.tscn").instantiate()
+	flipflop.global_position = Vector2(self.global_position.x - 150, self.global_position.y - 30)
+	
+	flipflop.set("velocity", Vector2(500 * player_direction, 0))
+	print("Flipflop fired")
+	get_parent().add_child(flipflop)
+	$AnimatedSprite2D.play("flipflop_fire")
+	flipflop_fire_timer.start(0.5)
+
+func _on_FlipFlopFireTimer_timeout():
+	is_firing_flipflop = false
