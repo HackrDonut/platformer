@@ -1,6 +1,14 @@
 res://player.tscn
-res://player.gd
 res://underworld.tscn
 res://world.tscn
 res://flipflop_power_up.tscn
 res://flipflop.tscn
+res://toad.tscn
+res://big_toad.tscn
+res://player.gd
+res://flipflop.gd
+res://global.gd
+res://bullet_ui.tscn
+res://real_bullet_ui.tscn
+res://coin_gui.tscn
+res://bullet_canvas.tscn

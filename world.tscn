@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c11beraxigigr"]
+[gd_scene load_steps=18 format=3 uid="uid://c11beraxigigr"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_1llpy"]
 [ext_resource type="Texture2D" uid="uid://5mgvxklc8lhi" path="res://super-bazza-bogan/brick.png" id="1_8neva"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bkaraswahql7" path="res://big_toad.tscn" id="5_aqio6"]
 [ext_resource type="PackedScene" uid="uid://d1t0pqtboyfn8" path="res://coin_gui.tscn" id="8_7dhwd"]
 [ext_resource type="PackedScene" uid="uid://be3rk5uunupsv" path="res://questionblock.tscn" id="10_ar0o2"]
+[ext_resource type="PackedScene" uid="uid://cnyuoixh84h1n" path="res://bullet_canvas.tscn" id="11_tn1bt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nnhl4"]
 texture = ExtResource("1_omltg")
@@ -165,6 +166,8 @@ shape = SubResource("CircleShape2D_xpckr")
 
 [node name="questionblock" parent="." instance=ExtResource("10_ar0o2")]
 position = Vector2(303, 435)
+
+[node name="bullet_canvas" parent="." instance=ExtResource("11_tn1bt")]
 
 [connection signal="body_entered" from="interact" to="." method="_on_interact_body_entered"]
 [connection signal="body_entered" from="transition" to="." method="_on_transition_body_entered"]

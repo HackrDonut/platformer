@@ -5,6 +5,8 @@ var can_fire_flipflop = false
 var is_dying = false
 var is_jumping = false
 var is_big = false
+var player_location_x = 0
+var bullets_left = 0
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -22,8 +24,11 @@ func _ready():
 	add_to_group("Player")
 	death_timer.connect("timeout", Callable(self, "_on_DeathTimer_timeout"))
 	flipflop_fire_timer.connect("timeout", Callable(self, "_on_FlipFlopFireTimer_timeout"))
+	
 
 func _physics_process(delta):
+	player_location_x = self.global_position.x
+	
 	if is_dying:
 		return
 		
@@ -45,6 +50,7 @@ func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		player_direction = direction
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
@@ -87,7 +93,8 @@ func _on_hitbox_2d_body_entered(body):
 func die():
 	if is_dying:
 		return
-		
+	
+	Global.current_state = Global.PlayerState.SMALL
 	is_dying = true
 	animated_sprite_2d.play("die")
 	await move_player_up_and_down()
@@ -117,7 +124,6 @@ func onDeathTimer_timeout():
 
 func become_big():
 	Global.current_state = Global.PlayerState.BIG
-	self.scale = Vector2(1.5, 1.5)
 
 func become_small():
 	Global.current_state = Global.PlayerState.SMALL
@@ -125,19 +131,21 @@ func become_small():
 
 func got_flipflop():
 	Global.current_state = Global.PlayerState.FLIPFLOP
+	bullets_left = 8
 
 # Inside fire shoe function
 func fire_flipflop():
 	is_firing_flipflop = true
 	print("firing flipflop")
 	var flipflop = load("res://flipflop.tscn").instantiate()
-	flipflop.global_position = Vector2(self.global_position.x - 150, self.global_position.y - 30)
+	flipflop.global_position = Vector2($".".position.x, $".".position.y + 10)
 	
 	flipflop.set("velocity", Vector2(500 * player_direction, 0))
 	print("Flipflop fired")
 	get_parent().add_child(flipflop)
-	$AnimatedSprite2D.play("flipflop_fire")
-	flipflop_fire_timer.start(0.5)
+	if is_jumping == false:
+		$AnimatedSprite2D.play("flipflop_fire")
+	flipflop_fire_timer.start(0.15)
 
 func _on_FlipFlopFireTimer_timeout():
 	is_firing_flipflop = false

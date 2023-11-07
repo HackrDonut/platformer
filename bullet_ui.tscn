@@ -1,0 +1,120 @@
+[gd_scene load_steps=12 format=3 uid="uid://s8f7r7khjww8"]
+
+[ext_resource type="Texture2D" uid="uid://cyn6mhwlklx3y" path="res://bullet ui.png" id="1_jte0u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtcla"]
+atlas = ExtResource("1_jte0u")
+region = Rect2(2550, 646, 1275, 323)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3wga"]
+atlas = ExtResource("1_jte0u")
+region = Rect2(1275, 646, 1275, 323)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0f6f"]
+atlas = ExtResource("1_jte0u")
+region = Rect2(0, 646, 1275, 323)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dmx6"]
+atlas = ExtResource("1_jte0u")
+region = Rect2(2550, 323, 1275, 323)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4emf"]
+atlas = ExtResource("1_jte0u")
+region = Rect2(1275, 323, 1275, 323)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nckm2"]
+atlas = ExtResource("1_jte0u")
+region = Rect2(0, 323, 1275, 323)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twqm8"]
+atlas = ExtResource("1_jte0u")
+region = Rect2(2550, 0, 1275, 323)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqohs"]
+atlas = ExtResource("1_jte0u")
+region = Rect2(1275, 0, 1275, 323)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mvls"]
+atlas = ExtResource("1_jte0u")
+region = Rect2(0, 0, 1275, 323)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aacib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtcla")
+}],
+"loop": true,
+"name": &"0_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3wga")
+}],
+"loop": true,
+"name": &"1_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0f6f")
+}],
+"loop": true,
+"name": &"2_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dmx6")
+}],
+"loop": true,
+"name": &"3_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4emf")
+}],
+"loop": true,
+"name": &"4_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nckm2")
+}],
+"loop": true,
+"name": &"5_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twqm8")
+}],
+"loop": true,
+"name": &"6_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqohs")
+}],
+"loop": true,
+"name": &"7_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mvls")
+}],
+"loop": true,
+"name": &"8_left",
+"speed": 5.0
+}]
+
+[node name="bullet_ui" type="AnimatedSprite2D"]
+position = Vector2(-318, 91)
+scale = Vector2(0.481424, 0.481424)
+sprite_frames = SubResource("SpriteFrames_aacib")
+animation = &"7_left"
