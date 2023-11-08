@@ -28,6 +28,7 @@ func update_animation():
 
 func _on_hitbox_body_entered(body):
 	if body.is_in_group("Player"):
+		body.they_die()
 		is_alive = false
 		queue_free()
 

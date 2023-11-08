@@ -1,74 +1,80 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699410427
-bazzalargethongs.png::CompressedTexture2D::3125710455435390823::1699377352::1699377352::1::::<><>::
-beer.gd::GDScript::-1::1699377352::0::1::::<>CharacterBody2D<>::
-beer.tscn::PackedScene::4655640807812468965::1699377352::0::1::::<><>::res://beer.gd<>uid://bbvjdsi8i1l15
-big_toad.gd::GDScript::-1::1699377352::0::1::::<>CharacterBody2D<>::
-big_toad.tscn::PackedScene::90863008481366222::1699394483::0::1::::<><>::res://big_toad.gd<>uid://c0sd3alc3nku2
-bullet ui.png::CompressedTexture2D::6486114583967136644::1699377352::1699377352::1::::<><>::
-bullets_container.gd::GDScript::-1::1699398045::0::1::::<>HBoxContainer<>::
-bullets_container.tscn::PackedScene::9214462652765770804::1699406594::0::1::::<><>::res://bullets_container.gd
-bullets_gui.gd::GDScript::-1::1699398168::0::1::::<>Panel<>::
-bullets_gui.tscn::PackedScene::9097287382893664865::1699406594::0::1::::<><>::uid://dqs2042vxrekt::::res://new_bullet_ui.png<>res://bullets_gui.gd
-bullet_canvas.tscn::PackedScene::5736081197828654133::1699394604::0::1::::<><>::uid://s8f7r7khjww8
-bullet_proj.png::CompressedTexture2D::6962653362744732857::1699377352::1699377352::1::::<><>::
-bullet_ui.tscn::PackedScene::1331885324532126813::1699394483::0::1::::<><>::uid://cyn6mhwlklx3y
-Coin.gd::GDScript::-1::1699377352::0::1::::<>Sprite2D<>::
-coin.tscn::PackedScene::1481022197397120149::1699410261::0::1::::<><>::uid://de6xdl8i6jndx::::res://super-bazza-bogan/coin.png<>res://Coin.gd<>uid://rsffrq73rc30::::res://super-bazza-bogan/coin.mp3
-coin_gui.gd::GDScript::-1::1699377352::0::1::::<>CanvasLayer<>::
-coin_gui.tscn::PackedScene::9024940744512995823::1699394483::0::1::::<><>::res://coin_gui.gd
-deep_space.png::CompressedTexture2D::3292798434570876781::1699408138::1699408138::1::::<><>::
-Donkey Kong Country OST (Super Nintendo) - Track 0723 - Aquatic Ambiance.mp3::AudioStreamMP3::8634918253929379887::1699400034::1699401425::1::::<><>::
-dustin (1).png::CompressedTexture2D::6352747725079327835::1699377352::1699377352::1::::<><>::
-Final Fantasy VII - Rap Remix (Instrumental).mp3::AudioStreamMP3::3909675344003583473::1699410358::1699410361::1::::<><>::
-flipflop.gd::GDScript::-1::1699377352::0::1::::<>Area2D<>::
-flipflop.tscn::PackedScene::6655541346161175155::1699394483::0::1::::<><>::res://flipflop.gd<>uid://c6g05bqd6xb6p
-flipflop_power_up.gd::GDScript::-1::1699395505::0::1::::<>Area2D<>::
-flipflop_power_up.tscn::PackedScene::943375900508561529::1699406594::0::1::::<><>::res://flipflop_power_up.gd<>uid://drnfm48ms70rd::::res://gun_powerup.png
-gameover.gd::GDScript::-1::1699377352::0::1::::<>CanvasLayer<>::
-gameover.tscn::PackedScene::5032218446646397483::1699377352::0::1::::<><>::res://gameover.gd
-global.gd::GDScript::-1::1699409658::0::1::::<>Node<>::
-gun_powerup.png::CompressedTexture2D::8379635892945588105::1699404786::1699404786::1::::<><>::
-icon.svg::CompressedTexture2D::419166575596037692::1699377352::1699377352::1::::<><>::
-Lake Lapcat - Bowser's Fury OST.mp3::AudioStreamMP3::3313916641123108252::1699400581::1699400700::1::::<><>::
-new_bullet_ui.png::CompressedTexture2D::8321127918385640399::1699396790::1699396790::1::::<><>::
-pixilart-drawing (1).png::CompressedTexture2D::1479068368608309211::1699377352::1699377352::1::::<><>::
-player.gd::GDScript::-1::1699409301::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::4105696240339991964::1699410260::0::1::::<><>::res://player.gd<>uid://cwrk3d434b2vn::::res://dustin (1).png
-Pokémon Scarlet & Violet - Academy Ace Tournament Battle Music (HQ).mp3::AudioStreamMP3::6161472531505191289::1699410427::1699410427::1::::<><>::
-questionblock.gd::GDScript::-1::1699399137::0::1::::<>Area2D<>::
-questionblock.tscn::PackedScene::2726030289698460709::1699377352::0::1::::<><>::uid://bpmnwe73wfoy3
-rainbow_road (1).png::CompressedTexture2D::7655967594691997193::1699406225::1699406225::1::::<><>::
-rainbow_road.png::CompressedTexture2D::8050328923541289824::1699406136::1699406136::1::::<><>::
-README.md::TextFile::-1::1699377352::0::1::::<><>::
-real_bullet_ui.tscn::PackedScene::5044188031765239265::1699377352::0::1::::<><>::uid://s8f7r7khjww8
-level_3.tscn::PackedScene::8544619666535013169::1699410411::0::1::::<><>::uid://byq3hnd7q2r7a::::res://player.tscn<>uid://dxd4v8tqod5va::::res://super-bazza-bogan/block.png<>res://level_3.gd<>uid://5mgvxklc8lhi::::res://super-bazza-bogan/brick.png<>uid://ci43lmcbfl0mu::::res://super-bazza-bogan/lvl2-block.png<>uid://dxbxbm4b6x737::::res://super-bazza-bogan/lvl2-brick.png<>uid://dfm3d2yb553ku::::res://super-bazza-bogan/flagpole.png<>uid://be3rk5uunupsv::::res://questionblock.tscn<>uid://d4js4a2rqloyu::::res://bullets_container.tscn<>uid://bkaraswahql7::::res://big_toad.tscn<>uid://vdohpn4wlxxt::::res://coin.tscn<>uid://d1t0pqtboyfn8::::res://coin_gui.tscn<>uid://bvx41twete4bl::::res://Final Fantasy VII - Rap Remix (Instrumental).mp3
-level_3.gd::GDScript::-1::1699405773::0::1::::<>Node2D<>::
-rainbow_road.tscn::PackedScene::5421345812313623656::1699410278::0::1::::<><>::uid://dhcuwx5uumpx6::::res://rainbow_road (1).png<>uid://d1t0pqtboyfn8::::res://coin_gui.tscn<>uid://bm6b557t3roh6::::res://deep_space.png<>res://rainbow_road.gd<>uid://byq3hnd7q2r7a::::res://player.tscn<>uid://dxd4v8tqod5va::::res://super-bazza-bogan/block.png<>uid://bkaraswahql7::::res://big_toad.tscn<>uid://b5yppsf0b88ai::::res://ruby.tscn<>uid://vdohpn4wlxxt::::res://coin.tscn
-rainbow_road.gd::GDScript::-1::1699409559::0::1::::<>Node2D<>::
-ruby.gd::GDScript::-1::1699407262::0::1::::<>CharacterBody2D<>::
-ruby.tscn::PackedScene::4542569555014459396::1699410260::0::1::::<><>::uid://cv1t1381flhch::::res://super-bazza-bogan/rage_ruby.png<>res://ruby.gd
-start.gd::GDScript::-1::1699377352::0::1::::<>CanvasLayer<>::
-start.tscn::PackedScene::8980665001811397546::1699377352::0::1::::<><>::res://start.gd
-thong.png::CompressedTexture2D::7688648104805394182::1699377352::1699377352::1::::<><>::
-toad.gd::GDScript::-1::1699377352::0::1::::<>CharacterBody2D<>::
-toad.tscn::PackedScene::5920450302277732785::1699394483::0::1::::<><>::uid://clvsw7qmscp5f
-underworld.gd::GDScript::-1::1699404136::0::1::::<>Node2D<>::
-underworld.tscn::PackedScene::3301918650659768240::1699410260::0::1::::<><>::uid://dfm3d2yb553ku::::res://super-bazza-bogan/flagpole.png<>res://underworld.gd<>uid://vcqbmfwovdrf::::res://pixilart-drawing (1).png<>uid://dxbxbm4b6x737::::res://super-bazza-bogan/lvl2-brick.png<>uid://ci43lmcbfl0mu::::res://super-bazza-bogan/lvl2-block.png<>uid://byq3hnd7q2r7a::::res://player.tscn<>uid://vdohpn4wlxxt::::res://coin.tscn<>uid://d1t0pqtboyfn8::::res://coin_gui.tscn<>uid://bkaraswahql7::::res://big_toad.tscn<>uid://d4js4a2rqloyu::::res://bullets_container.tscn<>uid://dva23vorup2op::::res://Donkey Kong Country OST (Super Nintendo) - Track 0723 - Aquatic Ambiance.mp3
-world.gd::GDScript::-1::1699398466::0::1::::<>Node2D<>::
-world.tscn::PackedScene::6651493877701887501::1699410260::0::1::::<><>::res://world.gd<>uid://5mgvxklc8lhi::::res://super-bazza-bogan/brick.png<>uid://dxd4v8tqod5va::::res://super-bazza-bogan/block.png<>uid://vdohpn4wlxxt::::res://coin.tscn<>uid://byq3hnd7q2r7a::::res://player.tscn<>uid://cql57l6mha6s8::::res://toad.tscn<>uid://dfm3d2yb553ku::::res://super-bazza-bogan/flagpole.png<>uid://bkaraswahql7::::res://big_toad.tscn<>uid://d1t0pqtboyfn8::::res://coin_gui.tscn<>uid://d4js4a2rqloyu::::res://bullets_container.tscn<>uid://bnhjytxixess7::::res://Lake Lapcat - Bowser's Fury OST.mp3
-::res://super-bazza-bogan/::1699406725
-bazzabogan.png::CompressedTexture2D::7166235559127708650::1699377352::1699377352::1::::<><>::
-beerbottle.png::CompressedTexture2D::2500514229772834734::1699377352::1699377352::1::::<><>::
-block.png::CompressedTexture2D::8781598645846125050::1699377352::1699377352::1::::<><>::
-brick.png::CompressedTexture2D::2130840869807160234::1699377352::1699377352::1::::<><>::
-coin.mp3::AudioStreamMP3::1230682574458828833::1699377352::1699377352::1::::<><>::
-coin.png::CompressedTexture2D::7505415613363305129::1699377352::1699377352::1::::<><>::
-flagpole.png::CompressedTexture2D::7536685690789855304::1699377352::1699377352::1::::<><>::
-lvl2-block.png::CompressedTexture2D::5395939424310998872::1699377352::1699377352::1::::<><>::
-lvl2-brick.png::CompressedTexture2D::8777068784302974944::1699377352::1699377352::1::::<><>::
-questionblock.png::CompressedTexture2D::3464854740513122572::1699377352::1699377352::1::::<><>::
-rage_ruby.png::CompressedTexture2D::6301682481715319439::1699406725::1699406725::1::::<><>::
-toad2.png::CompressedTexture2D::6564953428239384211::1699377352::1699377352::1::::<><>::
-toad.png::CompressedTexture2D::5589404479608969069::1699377352::1699377352::1::::<><>::
-underworldtoadg.png::CompressedTexture2D::7890648142706641332::1699377352::1699377352::1::::<><>::
+::res://::1699462695
+bazzalargethongs.png::CompressedTexture2D::3125710455435390823::1698850341::1698850341::1::::<><>::
+beer.gd::GDScript::-1::1698849744::0::1::::<>CharacterBody2D<>::
+beer.tscn::PackedScene::4655640807812468965::1698849970::0::1::::<><>::res://beer.gd<>uid://bbvjdsi8i1l15::::res://super-bazza-bogan/beerbottle.png
+big_toad.gd::GDScript::-1::1699462500::0::1::::<>CharacterBody2D<>::
+big_toad.tscn::PackedScene::90863008481366222::1699462554::0::1::::<><>::res://big_toad.gd<>uid://c0sd3alc3nku2::::res://super-bazza-bogan/toad2.png
+bullet ui.png::CompressedTexture2D::6486114583967136644::1699376373::1699376373::1::::<><>::
+bullets_container.gd::GDScript::-1::1699460709::0::1::::<>HBoxContainer<>::
+bullets_container.tscn::PackedScene::9214462652765770804::1699460709::0::1::::<><>::res://bullets_container.gd
+bullets_gui.gd::GDScript::-1::1699460709::0::1::::<>Panel<>::
+bullets_gui.tscn::PackedScene::9097287382893664865::1699460709::0::1::::<><>::uid://dqs2042vxrekt::::res://new_bullet_ui.png<>res://bullets_gui.gd
+bullet_canvas.tscn::PackedScene::5736081197828654133::1699460709::0::1::::<><>::uid://s8f7r7khjww8::::res://bullet_ui.tscn
+bullet_proj.png::CompressedTexture2D::6962653362744732857::1699375510::1699375510::1::::<><>::
+bullet_ui.tscn::PackedScene::1331885324532126813::1699377331::0::1::::<><>::uid://cyn6mhwlklx3y::::res://bullet ui.png
+Coin.gd::GDScript::-1::1698330735::0::1::::<>Sprite2D<>::
+coin.tscn::PackedScene::1481022197397120149::1699462554::0::1::::<><>::uid://de6xdl8i6jndx::::res://super-bazza-bogan/coin.png<>res://Coin.gd<>uid://rsffrq73rc30::::res://super-bazza-bogan/coin.mp3
+coin_gui.gd::GDScript::-1::1698677474::0::1::::<>CanvasLayer<>::
+coin_gui.tscn::PackedScene::9024940744512995823::1699377331::0::1::::<><>::res://coin_gui.gd
+deep_space.png::CompressedTexture2D::3292798434570876781::1699460709::1699460709::1::::<><>::
+Donkey Kong Country OST (Super Nintendo) - Track 0723 - Aquatic Ambiance.mp3::AudioStreamMP3::8634918253929379887::1699460709::1699460709::1::::<><>::
+dustin (1).png::CompressedTexture2D::6352747725079327835::1699374564::1699374565::1::::<><>::
+EXPLOSION Bang 04.wav::AudioStreamWAV::3321185262238156317::1699462121::1699462121::1::::<><>::
+Final Fantasy VII - Rap Remix (Instrumental).mp3::AudioStreamMP3::3909675344003583473::1699460709::1699460709::1::::<><>::
+flipflop.gd::GDScript::-1::1699376277::0::1::::<>Area2D<>::
+flipflop.tscn::PackedScene::6655541346161175155::1699377331::0::1::::<><>::res://flipflop.gd<>uid://c6g05bqd6xb6p::::res://bullet_proj.png
+flipflop_power_up.gd::GDScript::-1::1698850582::0::1::::<>Area2D<>::
+flipflop_power_up.tscn::PackedScene::943375900508561529::1699460709::0::1::::<><>::res://flipflop_power_up.gd<>uid://drnfm48ms70rd::::res://gun_powerup.png
+gameover.gd::GDScript::-1::1699461811::0::1::::<>CanvasLayer<>::
+gameover.tscn::PackedScene::5032218446646397483::1699462554::0::1::::<><>::res://gameover.gd
+global.gd::GDScript::-1::1699460709::0::1::::<>Node<>::
+gun_powerup.png::CompressedTexture2D::8379635892945588105::1699460709::1699460709::1::::<><>::
+icon.svg::CompressedTexture2D::419166575596037692::1697553514::1697553522::1::::<><>::
+Lake Lapcat - Bowser's Fury OST.mp3::AudioStreamMP3::3313916641123108252::1699460709::1699460709::1::::<><>::
+level_3.gd::GDScript::-1::1699460709::0::1::::<>Node2D<>::
+level_3.tscn::PackedScene::8544619666535013169::1699462554::0::1::::<><>::uid://byq3hnd7q2r7a::::res://player.tscn<>uid://dxd4v8tqod5va::::res://super-bazza-bogan/block.png<>res://level_3.gd<>uid://5mgvxklc8lhi::::res://super-bazza-bogan/brick.png<>uid://ci43lmcbfl0mu::::res://super-bazza-bogan/lvl2-block.png<>uid://dxbxbm4b6x737::::res://super-bazza-bogan/lvl2-brick.png<>uid://dfm3d2yb553ku::::res://super-bazza-bogan/flagpole.png<>uid://be3rk5uunupsv::::res://questionblock.tscn<>uid://d4js4a2rqloyu::::res://bullets_container.tscn<>uid://bkaraswahql7::::res://big_toad.tscn<>uid://vdohpn4wlxxt::::res://coin.tscn<>uid://d1t0pqtboyfn8::::res://coin_gui.tscn<>uid://bvx41twete4bl::::res://Final Fantasy VII - Rap Remix (Instrumental).mp3
+new_bullet_ui.png::CompressedTexture2D::8321127918385640399::1699460709::1699460709::1::::<><>::
+pixilart-drawing (1).png::CompressedTexture2D::1479068368608309211::1698419293::1698419293::1::::<><>::
+player.gd::GDScript::-1::1699462680::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4105696240339991964::1699462680::0::1::::<><>::res://player.gd<>uid://dkps742jrw82d::::res://WEAPON GUNSHOT Rifle Swish 02.wav<>uid://cwrk3d434b2vn::::res://dustin (1).png<>uid://dmhkdwrl5ew0r::::res://TECH INTERFACE Computer Terminal Beeps Negative 03.wav
+Pokémon Scarlet & Violet - Academy Ace Tournament Battle Music (HQ).mp3::AudioStreamMP3::6161472531505191289::1699460709::1699460709::1::::<><>::
+questionblock.gd::GDScript::-1::1699460709::0::1::::<>Area2D<>::
+questionblock.tscn::PackedScene::2726030289698460709::1698849970::0::1::::<><>::uid://bpmnwe73wfoy3::::res://super-bazza-bogan/questionblock.png<>res://questionblock.gd
+rainbow_road (1).png::CompressedTexture2D::7655967594691997193::1699460709::1699460709::1::::<><>::
+rainbow_road.gd::GDScript::-1::1699461397::0::1::::<>Node2D<>::
+rainbow_road.png::CompressedTexture2D::8050328923541289824::1699460709::1699460709::1::::<><>::
+rainbow_road.tscn::PackedScene::5421345812313623656::1699462554::0::1::::<><>::uid://dhcuwx5uumpx6::::res://rainbow_road (1).png<>uid://d1t0pqtboyfn8::::res://coin_gui.tscn<>uid://bm6b557t3roh6::::res://deep_space.png<>res://rainbow_road.gd<>uid://byq3hnd7q2r7a::::res://player.tscn<>uid://dxd4v8tqod5va::::res://super-bazza-bogan/block.png<>uid://bkaraswahql7::::res://big_toad.tscn<>uid://b5yppsf0b88ai::::res://ruby.tscn<>uid://vdohpn4wlxxt::::res://coin.tscn<>uid://ct1ws1tgvpold::::res://Pokémon Scarlet & Violet - Academy Ace Tournament Battle Music (HQ).mp3
+README.md::TextFile::-1::1697553686::0::1::::<><>::
+real_bullet_ui.tscn::PackedScene::5044188031765239265::1699377262::0::1::::<><>::uid://s8f7r7khjww8::::res://bullet_ui.tscn
+TECH INTERFACE Computer Terminal Beeps Negative 03.wav::AudioStreamWAV::8016592528638931035::1699462540::1699462541::1::::<><>::
+victory.gd::GDScript::-1::1699461830::0::1::::<>TileMap<>::
+victory.tscn::PackedScene::7292441579963644578::1699462554::0::1::::<><>::uid://dxd4v8tqod5va::::res://super-bazza-bogan/block.png<>res://victory.gd
+ruby.gd::GDScript::-1::1699460709::0::1::::<>CharacterBody2D<>::
+ruby.tscn::PackedScene::4542569555014459396::1699462554::0::1::::<><>::uid://cv1t1381flhch::::res://super-bazza-bogan/rage_ruby.png<>res://ruby.gd
+start.gd::GDScript::-1::1698678136::0::1::::<>CanvasLayer<>::
+start.tscn::PackedScene::8980665001811397546::1698849970::0::1::::<><>::res://start.gd
+thong.png::CompressedTexture2D::7688648104805394182::1698850330::1698850330::1::::<><>::
+toad.gd::GDScript::-1::1699462465::0::1::::<>CharacterBody2D<>::
+toad.tscn::PackedScene::5920450302277732785::1699462554::0::1::::<><>::uid://clvsw7qmscp5f::::res://super-bazza-bogan/toad.png<>res://toad.gd
+underworld.gd::GDScript::-1::1699460709::0::1::::<>Node2D<>::
+underworld.tscn::PackedScene::3301918650659768240::1699462554::0::1::::<><>::uid://dfm3d2yb553ku::::res://super-bazza-bogan/flagpole.png<>res://underworld.gd<>uid://vcqbmfwovdrf::::res://pixilart-drawing (1).png<>uid://dxbxbm4b6x737::::res://super-bazza-bogan/lvl2-brick.png<>uid://ci43lmcbfl0mu::::res://super-bazza-bogan/lvl2-block.png<>uid://byq3hnd7q2r7a::::res://player.tscn<>uid://vdohpn4wlxxt::::res://coin.tscn<>uid://d1t0pqtboyfn8::::res://coin_gui.tscn<>uid://bkaraswahql7::::res://big_toad.tscn<>uid://d4js4a2rqloyu::::res://bullets_container.tscn<>uid://dva23vorup2op::::res://Donkey Kong Country OST (Super Nintendo) - Track 0723 - Aquatic Ambiance.mp3
+VOCAL EVIL Impact Hit Slash 04.wav::AudioStreamWAV::3562735044885665245::1699462695::1699462696::1::::<><>::
+WEAPON GUNSHOT Rifle Swish 02.wav::AudioStreamWAV::7893267770364690365::1699461930::1699461930::1::::<><>::
+world.gd::GDScript::-1::1699460709::0::1::::<>Node2D<>::
+world.tscn::PackedScene::6651493877701887501::1699462553::0::1::::<><>::res://world.gd<>uid://5mgvxklc8lhi::::res://super-bazza-bogan/brick.png<>uid://dxd4v8tqod5va::::res://super-bazza-bogan/block.png<>uid://vdohpn4wlxxt::::res://coin.tscn<>uid://byq3hnd7q2r7a::::res://player.tscn<>uid://cql57l6mha6s8::::res://toad.tscn<>uid://dfm3d2yb553ku::::res://super-bazza-bogan/flagpole.png<>uid://bkaraswahql7::::res://big_toad.tscn<>uid://d1t0pqtboyfn8::::res://coin_gui.tscn<>uid://d4js4a2rqloyu::::res://bullets_container.tscn<>uid://bnhjytxixess7::::res://Lake Lapcat - Bowser's Fury OST.mp3
+::res://super-bazza-bogan/::1699460709
+bazzabogan.png::CompressedTexture2D::7166235559127708650::1697554490::1697554491::1::::<><>::
+beerbottle.png::CompressedTexture2D::2500514229772834734::1697554490::1697554491::1::::<><>::
+block.png::CompressedTexture2D::8781598645846125050::1697554490::1697554491::1::::<><>::
+brick.png::CompressedTexture2D::2130840869807160234::1697554490::1697554491::1::::<><>::
+coin.mp3::AudioStreamMP3::1230682574458828833::1697554490::1697554490::1::::<><>::
+coin.png::CompressedTexture2D::7505415613363305129::1698244712::1698676567::1::::<><>::
+flagpole.png::CompressedTexture2D::7536685690789855304::1697554490::1697554491::1::::<><>::
+lvl2-block.png::CompressedTexture2D::5395939424310998872::1697554490::1697554491::1::::<><>::
+lvl2-brick.png::CompressedTexture2D::8777068784302974944::1697554490::1697554491::1::::<><>::
+questionblock.png::CompressedTexture2D::3464854740513122572::1697554490::1697554491::1::::<><>::
+rage_ruby.png::CompressedTexture2D::6301682481715319439::1699460709::1699460709::1::::<><>::
+toad2.png::CompressedTexture2D::6564953428239384211::1697554490::1697554491::1::::<><>::
+toad.png::CompressedTexture2D::5589404479608969069::1697554490::1697554491::1::::<><>::
+underworldtoadg.png::CompressedTexture2D::7890648142706641332::1697554490::1697554491::1::::<><>::

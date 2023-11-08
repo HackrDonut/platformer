@@ -111,6 +111,7 @@ func die():
 	if is_dying:
 		return
 	
+	$we_die.play()
 	Global.current_state = Global.PlayerState.SMALL
 	is_dying = true
 	animated_sprite_2d.play("die")
@@ -155,14 +156,13 @@ func got_flipflop():
 func fire_flipflop():
 	if bullets_left > 0:
 		is_firing_flipflop = true
-		print("firing flipflop")
 		var flipflop = load("res://flipflop.tscn").instantiate()
 		bullets_left -= 1
 		bullets_changed.emit(bullets_left)
+		$pew_pew.play()
 		flipflop.global_position = Vector2($".".position.x, $".".position.y + 10)
 	
 		flipflop.set("velocity", Vector2(500 * player_direction, 0))
-		print("Flipflop fired")
 		get_parent().add_child(flipflop)
 		if is_jumping == false:
 			$AnimatedSprite2D.play("flipflop_fire")
@@ -170,3 +170,6 @@ func fire_flipflop():
 
 func _on_FlipFlopFireTimer_timeout():
 	is_firing_flipflop = false
+
+func they_die():
+	$tenemy_die.play()

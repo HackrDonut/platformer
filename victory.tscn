@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://db5rphf67esmc"]
+
+[ext_resource type="Texture2D" uid="uid://dxd4v8tqod5va" path="res://super-bazza-bogan/block.png" id="1_ij4fq"]
+[ext_resource type="Script" path="res://victory.gd" id="2_5esek"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x55ir"]
+texture = ExtResource("1_ij4fq")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_oux56"]
+sources/0 = SubResource("TileSetAtlasSource_x55ir")
+
+[node name="victory" type="TileMap"]
+tile_set = SubResource("TileSet_oux56")
+format = 2
+layer_0/tile_data = PackedInt32Array(262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 327691, 0, 0, 393227, 0, 0, 458763, 0, 0, 524299, 0, 0, 589835, 0, 0, 655371, 0, 0, 720907, 0, 0, 262159, 0, 0, 327695, 0, 0, 393231, 0, 0, 458767, 0, 0, 524303, 0, 0, 589839, 0, 0, 655375, 0, 0, 720911, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 262162, 0, 0, 327698, 0, 0, 393234, 0, 0, 524306, 0, 0, 589842, 0, 0, 655378, 0, 0, 720914, 0, 0, 720916, 0, 0, 655380, 0, 0, 589844, 0, 0, 524308, 0, 0, 458772, 0, 0, 393236, 0, 0, 327700, 0, 0, 262164, 0, 0, 262165, 0, 0, 262166, 0, 0, 262167, 0, 0, 458773, 0, 0, 458774, 0, 0, 720917, 0, 0, 720918, 0, 0, 720919, 0, 0, 262172, 0, 0, 327708, 0, 0, 393244, 0, 0, 458780, 0, 0, 524316, 0, 0, 589852, 0, 0, 655388, 0, 0, 720924, 0, 0, 720925, 0, 0, 720926, 0, 0, 720927, 0, 0, 458781, 0, 0, 458782, 0, 0, 262173, 0, 0, 262174, 0, 0, 262175, 0, 0, 720929, 0, 0, 655393, 0, 0, 589857, 0, 0, 524321, 0, 0, 458785, 0, 0, 393249, 0, 0, 327713, 0, 0, 262177, 0, 0, 327714, 0, 0, 393250, 0, 0, 458787, 0, 0, 524323, 0, 0, 589860, 0, 0, 655396, 0, 0, 720933, 0, 0, 655397, 0, 0, 589861, 0, 0, 524325, 0, 0, 458789, 0, 0, 393253, 0, 0, 327717, 0, 0, 262181, 0, 0, 720935, 0, 0, 655399, 0, 0, 589863, 0, 0, 524327, 0, 0, 458791, 0, 0, 393255, 0, 0, 327719, 0, 0, 262183, 0, 0, 262184, 0, 0, 262185, 0, 0, 327722, 0, 0, 393258, 0, 0, 458794, 0, 0, 524330, 0, 0, 589866, 0, 0, 655402, 0, 0, 720937, 0, 0, 720936, 0, 0)
+script = ExtResource("2_5esek")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 1000
+limit_bottom = 450
+
+[node name="Play_again" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 233.0
+offset_top = 233.0
+offset_right = 374.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play Again"
+
+[node name="quit" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 467.0
+offset_top = 234.0
+offset_right = 608.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[connection signal="pressed" from="Play_again" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

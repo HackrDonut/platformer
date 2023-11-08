@@ -1,7 +1,10 @@
-[gd_scene load_steps=31 format=3 uid="uid://byq3hnd7q2r7a"]
+[gd_scene load_steps=34 format=3 uid="uid://byq3hnd7q2r7a"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_m0qxu"]
+[ext_resource type="AudioStream" uid="uid://dkps742jrw82d" path="res://WEAPON GUNSHOT Rifle Swish 02.wav" id="3_xodh1"]
 [ext_resource type="Texture2D" uid="uid://cwrk3d434b2vn" path="res://dustin (1).png" id="4_3uhj8"]
+[ext_resource type="AudioStream" uid="uid://dmhkdwrl5ew0r" path="res://TECH INTERFACE Computer Terminal Beeps Negative 03.wav" id="4_i0ldc"]
+[ext_resource type="AudioStream" uid="uid://bq02yw4vfhgvt" path="res://VOCAL EVIL Impact Hit Slash 04.wav" id="5_xsmli"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_agsct"]
 atlas = ExtResource("4_3uhj8")
@@ -406,5 +409,15 @@ shape = SubResource("RectangleShape2D_bwasl")
 
 [node name="FlipFlopFireTimer" type="Timer" parent="."]
 wait_time = 0.15
+
+[node name="pew_pew" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xodh1")
+
+[node name="tenemy_die" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_i0ldc")
+volume_db = -0.3
+
+[node name="we_die" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_xsmli")
 
 [connection signal="body_entered" from="Hitbox2D" to="." method="_on_hitbox_2d_body_entered"]
