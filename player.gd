@@ -6,7 +6,11 @@ var is_dying = false
 var is_jumping = false
 var is_big = false
 var player_location_x = 0
-var bullets_left = 0
+var max_bullets: int = 8
+var bullets_left: int = 8
+var dont_consistently_update = false
+
+signal bullets_changed
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -27,6 +31,11 @@ func _ready():
 	
 
 func _physics_process(delta):
+	if Global.current_state == Global.PlayerState.FLIPFLOP:
+		if dont_consistently_update == false:
+			bullets_left = 8
+			dont_consistently_update = true
+	
 	player_location_x = self.global_position.x
 	
 	if is_dying:
@@ -48,11 +57,14 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-		player_direction = direction
+	if Global.current_state != Global.PlayerState.RUBY:
+		if direction:
+			velocity.x = direction * SPEED
+			player_direction = direction
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = 500
 
 	update_animation(direction)
 	move_and_slide()
@@ -78,6 +90,11 @@ func update_animation(direction):
 				animated_sprite_2d.play("flipflop_run")
 			else:
 				animated_sprite_2d.play("flipflop_idle")
+		Global.PlayerState.RUBY:
+			animated_sprite_2d.play("ruby_run")
+			if direction != 0:
+				animated_sprite_2d.flip_h = (direction < 0)
+				animated_sprite_2d.play("ruby_run")
 
 
 func _on_hitbox_2d_body_entered(body):
@@ -85,10 +102,10 @@ func _on_hitbox_2d_body_entered(body):
 		match Global.current_state:
 			Global.PlayerState.SMALL:
 				die()
-			Global.PlayerState.BIG:
-				Global.current_state = Global.PlayerState.SMALL
+			Global.PlayerState.RUBY:
+				die()	
 			Global.PlayerState.FLIPFLOP:
-				Global.current_state = Global.PlayerState.BIG
+				Global.current_state = Global.PlayerState.SMALL
 
 func die():
 	if is_dying:
@@ -105,6 +122,7 @@ func die():
 		get_tree().reload_current_scene()
 	else:
 		get_tree().change_scene_to_file("res://gameover.tscn")
+		Global.player_lives = 3
 
 func move_player_up_and_down():
 	var start_position = position
@@ -135,17 +153,20 @@ func got_flipflop():
 
 # Inside fire shoe function
 func fire_flipflop():
-	is_firing_flipflop = true
-	print("firing flipflop")
-	var flipflop = load("res://flipflop.tscn").instantiate()
-	flipflop.global_position = Vector2($".".position.x, $".".position.y + 10)
+	if bullets_left > 0:
+		is_firing_flipflop = true
+		print("firing flipflop")
+		var flipflop = load("res://flipflop.tscn").instantiate()
+		bullets_left -= 1
+		bullets_changed.emit(bullets_left)
+		flipflop.global_position = Vector2($".".position.x, $".".position.y + 10)
 	
-	flipflop.set("velocity", Vector2(500 * player_direction, 0))
-	print("Flipflop fired")
-	get_parent().add_child(flipflop)
-	if is_jumping == false:
-		$AnimatedSprite2D.play("flipflop_fire")
-	flipflop_fire_timer.start(0.15)
+		flipflop.set("velocity", Vector2(500 * player_direction, 0))
+		print("Flipflop fired")
+		get_parent().add_child(flipflop)
+		if is_jumping == false:
+			$AnimatedSprite2D.play("flipflop_fire")
+		flipflop_fire_timer.start(0.15)
 
 func _on_FlipFlopFireTimer_timeout():
 	is_firing_flipflop = false

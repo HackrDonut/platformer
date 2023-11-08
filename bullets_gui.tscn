@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2u182e1dm0bl"]
+
+[ext_resource type="Texture2D" uid="uid://dqs2042vxrekt" path="res://new_bullet_ui.png" id="1_73r24"]
+[ext_resource type="Script" path="res://bullets_gui.gd" id="1_rxx13"]
+
+[node name="bullets_gui" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(28, 51)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -28.0
+offset_bottom = 51.0
+grow_horizontal = 0
+script = ExtResource("1_rxx13")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3, -1)
+scale = Vector2(0.166667, 0.166667)
+texture = ExtResource("1_73r24")
+centered = false
+hframes = 2

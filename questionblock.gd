@@ -19,9 +19,7 @@ func bump_block():
 	
 	
 	match Global.current_state:
-		Global.PlayerState.SMALL:
-			Global.spawn_beer_bottle(self.global_position + Vector2(0, -20))
-		Global.PlayerState.BIG, Global.PlayerState.FLIPFLOP:
+		Global.PlayerState.SMALL, Global.PlayerState.FLIPFLOP:
 			Global.spawn_flipflop_power_up(self.global_position + Vector2(0, -40))
 	
 	

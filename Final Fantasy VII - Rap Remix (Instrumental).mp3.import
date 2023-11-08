@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvx41twete4bl"
+path="res://.godot/imported/Final Fantasy VII - Rap Remix (Instrumental).mp3-c7fe95c58537b1e50536f927a1a5147e.mp3str"
+
+[deps]
+
+source_file="res://Final Fantasy VII - Rap Remix (Instrumental).mp3"
+dest_files=["res://.godot/imported/Final Fantasy VII - Rap Remix (Instrumental).mp3-c7fe95c58537b1e50536f927a1a5147e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

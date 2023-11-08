@@ -5,3 +5,5 @@
 [node name="bullet_canvas" type="CanvasLayer"]
 
 [node name="bullet_ui" parent="." instance=ExtResource("1_whnis")]
+position = Vector2(-156.651, 50.125)
+scale = Vector2(0.228328, 0.228328)

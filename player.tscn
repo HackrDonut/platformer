@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://byq3hnd7q2r7a"]
+[gd_scene load_steps=31 format=3 uid="uid://byq3hnd7q2r7a"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_m0qxu"]
 [ext_resource type="Texture2D" uid="uid://cwrk3d434b2vn" path="res://dustin (1).png" id="4_3uhj8"]
@@ -62,6 +62,22 @@ region = Rect2(0, 0, 544, 544)
 [sub_resource type="AtlasTexture" id="AtlasTexture_5mwax"]
 atlas = ExtResource("4_3uhj8")
 region = Rect2(0, 1088, 544, 544)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cd76f"]
+atlas = ExtResource("4_3uhj8")
+region = Rect2(1632, 1088, 544, 544)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqxtj"]
+atlas = ExtResource("4_3uhj8")
+region = Rect2(2176, 1088, 544, 544)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wb6n2"]
+atlas = ExtResource("4_3uhj8")
+region = Rect2(2720, 1088, 544, 544)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnlj7"]
+atlas = ExtResource("4_3uhj8")
+region = Rect2(3264, 1088, 544, 544)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2nnqk"]
 atlas = ExtResource("4_3uhj8")
@@ -311,6 +327,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_cd76f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqxtj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wb6n2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnlj7")
+}],
+"loop": true,
+"name": &"ruby_run",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_2nnqk")
 }, {
 "duration": 1.0,
@@ -347,7 +380,8 @@ script = ExtResource("1_m0qxu")
 position = Vector2(-1, 2)
 scale = Vector2(0.0767463, 0.0767463)
 sprite_frames = SubResource("SpriteFrames_qxe1w")
-animation = &"flipflop_fire"
+animation = &"ruby_run"
+frame_progress = 0.755678
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)

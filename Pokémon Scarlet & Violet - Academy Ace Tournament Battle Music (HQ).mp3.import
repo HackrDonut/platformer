@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ct1ws1tgvpold"
+path="res://.godot/imported/Pokémon Scarlet & Violet - Academy Ace Tournament Battle Music (HQ).mp3-1096d83afeb3c8d8848d95fa78f7df18.mp3str"
+
+[deps]
+
+source_file="res://Pokémon Scarlet & Violet - Academy Ace Tournament Battle Music (HQ).mp3"
+dest_files=["res://.godot/imported/Pokémon Scarlet & Violet - Academy Ace Tournament Battle Music (HQ).mp3-1096d83afeb3c8d8848d95fa78f7df18.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

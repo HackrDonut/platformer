@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://no8i7k4x4q7b"]
 
-[ext_resource type="Texture2D" uid="uid://dhso58cnpbcg1" path="res://thong.png" id="1_034xq"]
 [ext_resource type="Script" path="res://flipflop_power_up.gd" id="1_bv6x8"]
+[ext_resource type="Texture2D" uid="uid://drnfm48ms70rd" path="res://gun_powerup.png" id="2_4nr57"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hr34u"]
 radius = 16.0
@@ -13,7 +13,8 @@ script = ExtResource("1_bv6x8")
 shape = SubResource("CircleShape2D_hr34u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_034xq")
-hframes = 5
+position = Vector2(1, 8)
+scale = Vector2(0.0531565, 0.0531564)
+texture = ExtResource("2_4nr57")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

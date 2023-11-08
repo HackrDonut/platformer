@@ -1,8 +1,8 @@
 extends Node
 
 var total_coins = 0
-var player_lives = 3
-enum PlayerState { SMALL, BIG, FLIPFLOP }
+var player_lives = 5
+enum PlayerState { SMALL, BIG, FLIPFLOP, RUBY }
 var current_state = PlayerState.SMALL
 
 func spawn_beer_bottle(pos):

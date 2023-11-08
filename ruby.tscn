@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://b5yppsf0b88ai"]
+
+[ext_resource type="Texture2D" uid="uid://cv1t1381flhch" path="res://super-bazza-bogan/rage_ruby.png" id="1_6p0tg"]
+[ext_resource type="Script" path="res://ruby.gd" id="1_lr6sl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0naa"]
+atlas = ExtResource("1_6p0tg")
+region = Rect2(0, 0, 510, 391)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uoo4q"]
+atlas = ExtResource("1_6p0tg")
+region = Rect2(510, 0, 510, 391)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_us5v8"]
+atlas = ExtResource("1_6p0tg")
+region = Rect2(1020, 0, 510, 391)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hdcd5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0naa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uoo4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_us5v8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.5
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x80hm"]
+size = Vector2(34, 27)
+
+[node name="ruby" type="CharacterBody2D"]
+script = ExtResource("1_lr6sl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(0.0703325, 0.0703325)
+sprite_frames = SubResource("SpriteFrames_hdcd5")
+frame_progress = 0.0933897
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, -8.5)
+shape = SubResource("RectangleShape2D_x80hm")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

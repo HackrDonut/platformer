@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dva23vorup2op"
+path="res://.godot/imported/Donkey Kong Country OST (Super Nintendo) - Track 0723 - Aquatic Ambiance.mp3-7a2c9f6d723961fe6d67159522f742a9.mp3str"
+
+[deps]
+
+source_file="res://Donkey Kong Country OST (Super Nintendo) - Track 0723 - Aquatic Ambiance.mp3"
+dest_files=["res://.godot/imported/Donkey Kong Country OST (Super Nintendo) - Track 0723 - Aquatic Ambiance.mp3-7a2c9f6d723961fe6d67159522f742a9.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

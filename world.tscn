@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dfm3d2yb553ku" path="res://super-bazza-bogan/flagpole.png" id="4_ochtm"]
 [ext_resource type="PackedScene" uid="uid://bkaraswahql7" path="res://big_toad.tscn" id="5_aqio6"]
 [ext_resource type="PackedScene" uid="uid://d1t0pqtboyfn8" path="res://coin_gui.tscn" id="8_7dhwd"]
-[ext_resource type="PackedScene" uid="uid://be3rk5uunupsv" path="res://questionblock.tscn" id="10_ar0o2"]
-[ext_resource type="PackedScene" uid="uid://cnyuoixh84h1n" path="res://bullet_canvas.tscn" id="11_tn1bt"]
+[ext_resource type="PackedScene" uid="uid://d4js4a2rqloyu" path="res://bullets_container.tscn" id="11_a1qmj"]
+[ext_resource type="AudioStream" uid="uid://bnhjytxixess7" path="res://Lake Lapcat - Bowser's Fury OST.mp3" id="11_ac4b3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nnhl4"]
 texture = ExtResource("1_omltg")
@@ -43,11 +43,20 @@ sources/3 = SubResource("TileSetAtlasSource_7kkp1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msdt0"]
 size = Vector2(2245, 35)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xpckr"]
-radius = 19.0263
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_knmlx"]
+radius = 11.0
+height = 176.0
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_1llpy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -198.0
+offset_top = -367.0
+offset_right = 3399.0
+offset_bottom = 779.0
+color = Color(0, 0.431373, 0.490196, 1)
 
 [node name="TileMap2D" type="TileMap" parent="."]
 scale = Vector2(1.14336, 1.14374)
@@ -146,9 +155,6 @@ limit_top = 0
 limit_bottom = 650
 position_smoothing_speed = 20.0
 
-[node name="questionblock" parent="TileMap2D" instance=ExtResource("10_ar0o2")]
-position = Vector2(1032.92, 423.173)
-
 [node name="interact" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interact"]
@@ -161,13 +167,25 @@ shape = SubResource("RectangleShape2D_msdt0")
 position = Vector2(2335, 484)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="transition"]
-position = Vector2(-21, 42)
-shape = SubResource("CircleShape2D_xpckr")
+position = Vector2(-20, -44)
+shape = SubResource("CapsuleShape2D_knmlx")
 
-[node name="questionblock" parent="." instance=ExtResource("10_ar0o2")]
-position = Vector2(303, 435)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="bullet_canvas" parent="." instance=ExtResource("11_tn1bt")]
+[node name="bullets_container" parent="CanvasLayer" instance=ExtResource("11_a1qmj")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_right = 976.0
+offset_bottom = 149.0
+grow_horizontal = 1
+
+[node name="w_bgm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_ac4b3")
+autoplay = true
+max_distance = 10000.0
+area_mask = 3
 
 [connection signal="body_entered" from="interact" to="." method="_on_interact_body_entered"]
 [connection signal="body_entered" from="transition" to="." method="_on_transition_body_entered"]
